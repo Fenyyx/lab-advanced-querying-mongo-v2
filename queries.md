@@ -15,6 +15,7 @@ Projection: {name: 1, _id: 0}
 
 <!-- Your Query Goes Here -->
 Query: {number_of_employees: { $gt: 5000 }}
+sort: {number_of_employees: 1}
 Limit: 20
 <br>
 
@@ -36,7 +37,9 @@ Projection: {name: 1, _id: 0, ipo: 1}
 **5. All the companies that don't include the `partners` field.**
 
 <!-- Your Query Goes Here -->
+
 Query: {partners: {$exists: false}}
+
 <br>
 
 **6. All the companies that have a null value on the `category_code` field.**
